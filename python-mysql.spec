@@ -11,6 +11,7 @@ BuildRequires:	MySQL-devel
 BuildRequires:	zlib-devel
 Provides:	MySQL-python = %{version}-%{release}
 Obsoletes:	MySQL-python
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Python interface to MySQL-3.2 and beyond
