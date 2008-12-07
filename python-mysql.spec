@@ -6,7 +6,8 @@ License:	GPL
 Group:		Development/Python
 URL:		http://sourceforge.net/projects/mysql-python/
 Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}.tar.gz
-BuildRequires:	python-devel
+%py_requires -d
+BuildRequires:	python-setuptools
 BuildRequires:	mysql-devel
 BuildRequires:	zlib-devel
 Provides:	MySQL-python = %{version}-%{release}
@@ -34,7 +35,7 @@ version is used in MySQLdb. MySQLdb is free software.
 %setup -q -n MySQL-python-%{version}
 
 %build
-env CFLAGS="%{optflags}" python setup.py build
+env CFLAGS="%{optflags} %{?ldflags}" python setup.py build
 
 %install
 rm -rf %{buildroot}
