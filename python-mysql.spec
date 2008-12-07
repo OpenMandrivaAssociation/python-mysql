@@ -39,12 +39,12 @@ env CFLAGS="%{optflags} %{?ldflags}" python setup.py build
 
 %install
 rm -rf %{buildroot}
-python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+python setup.py install --root=%{buildroot}
 
 %clean
 rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
 %doc README doc/*
-%dir %{python_sitearch}/MySQLdb
+%{python_sitearch}/*
