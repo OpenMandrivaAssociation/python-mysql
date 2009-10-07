@@ -1,11 +1,13 @@
+%define pre c1
+
 Summary:	Python interface to MySQL
 Name:		python-mysql
-Version:	1.2.2
-Release:	%mkrel 6
+Version:	1.2.3
+Release:	%mkrel 0.%{pre}.1
 License:	GPL
 Group:		Development/Python
 URL:		http://sourceforge.net/projects/mysql-python/
-Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}%{pre}.tar.gz
 %py_requires -d
 BuildRequires:	python-setuptools
 BuildRequires:	mysql-devel
@@ -31,8 +33,7 @@ written for MySQL 3.21, c) apparently t actively maintained. No code from that
 version is used in MySQLdb. MySQLdb is free software.
 
 %prep
-
-%setup -q -n MySQL-python-%{version}
+%setup -q -n MySQL-python-%{version}%{pre}
 
 %build
 env CFLAGS="%{optflags} %{?ldflags}" python setup.py build
