@@ -3,7 +3,7 @@
 Summary:	Python interface to MySQL
 Name:		python-mysql
 Version:	1.2.3
-Release:	%mkrel 0.%{pre}.6
+Release:	%mkrel 0.%{pre}.7
 License:	GPL
 Group:		Development/Python
 URL:		http://sourceforge.net/projects/mysql-python/
