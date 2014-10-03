@@ -8,8 +8,8 @@ License:	GPLv2
 Group:		Development/Python
 Url:		http://sourceforge.net/projects/mysql-python/
 Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}%{pre}.zip
-BuildRequires:  python-devel
-BuildRequires:	python-setuptools
+BuildRequires:  python2-devel
+BuildRequires:	python2-setuptools
 BuildRequires:	mariadb-devel
 BuildRequires:	pkgconfig(zlib)
 
