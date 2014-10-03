@@ -9,7 +9,7 @@ Group:		Development/Python
 Url:		http://sourceforge.net/projects/mysql-python/
 Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}%{pre}.zip
 BuildRequires:  python2-devel
-BuildRequires:	python2-setuptools
+BuildRequires:	python2-distribute
 BuildRequires:	mariadb-devel
 BuildRequires:	pkgconfig(zlib)
 
