@@ -2,12 +2,12 @@
 
 Summary:	Python interface to MySQL
 Name:		python-mysql
-Version:	1.2.5
-Release:	6
+Version:	1.3.14
+Release:	1
 License:	GPLv2
 Group:		Development/Python
 Url:		http://sourceforge.net/projects/mysql-python/
-Source0:	http://prdownloads.sourceforge.net/mysql-python/MySQL-python-%{version}%{pre}.zip
+Source0:	https://github.com/PyMySQL/mysqlclient-python/archive/1.3.14/mysqlclient-python-%{version}.tar.gz
 BuildRequires:  python2-devel
 BuildRequires:	python2-distribute
 BuildRequires:	mariadb-devel
@@ -40,5 +40,4 @@ python2 setup.py install --root=%{buildroot}
 
 %files
 %doc doc/*
-%{python2_sitearch}/*
-
+%{py_platsitedir}/*
