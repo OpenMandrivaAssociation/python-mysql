@@ -9,7 +9,7 @@ Group:		Development/Python
 Url:		https://pypi.org/project/mysqlclient/
 Source0:	https://files.pythonhosted.org/packages/source/m/mysqlclient/mysqlclient-%{version}.tar.gz
 BuildRequires:  pkgconfig(python3)
-BuildRequires:	python3.8dist(setuptools)
+BuildRequires:	python3.9dist(setuptools)
 BuildRequires:	mariadb-devel
 BuildRequires:	pkgconfig(zlib)
 
