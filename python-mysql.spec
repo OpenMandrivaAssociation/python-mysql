@@ -33,7 +33,7 @@ version is used in MySQLdb. MySQLdb is free software.
 %autosetup -p1 -n mysqlclient-%{version}%{pre}
 
 %build
-CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython3.8" python setup.py build
+CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython3.9" python setup.py build
 
 %install
 python setup.py install --root=%{buildroot}
