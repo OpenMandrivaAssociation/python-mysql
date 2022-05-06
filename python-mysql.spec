@@ -3,7 +3,7 @@
 Summary:	Python interface to MySQL
 Name:		python-mysql
 Version:	1.4.6
-Release:	1
+Release:	2
 License:	GPLv2
 Group:		Development/Python
 Url:		https://pypi.org/project/mysqlclient/
