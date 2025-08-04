@@ -2,8 +2,8 @@
 
 Summary:	Python interface to MySQL
 Name:		python-mysql
-Version:	1.4.6
-Release:	3
+Version:	2.2.7
+Release:	1
 License:	GPLv2
 Group:		Development/Python
 Url:		https://pypi.org/project/mysqlclient/
@@ -33,7 +33,7 @@ version is used in MySQLdb. MySQLdb is free software.
 %autosetup -p1 -n mysqlclient-%{version}%{pre}
 
 %build
-CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython3.9" python setup.py build
+CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython3.11" python setup.py build
 
 %install
 python setup.py install --root=%{buildroot}
