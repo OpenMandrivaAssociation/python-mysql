@@ -2,19 +2,19 @@
 
 Summary:	Python interface to MySQL
 Name:		python-mysql
-Version:	2.2.7
-Release:	3
+Version:	2.2.8
+Release:	1
 License:	GPLv2
 Group:		Development/Python
 Url:		https://pypi.org/project/mysqlclient/
 Source0:	https://files.pythonhosted.org/packages/source/m/mysqlclient/mysqlclient-%{version}.tar.gz
 BuildRequires:  pkgconfig(python3)
-BuildRequires:	python3.11dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	mariadb-devel
 BuildRequires:	pkgconfig(zlib)
 
 %description
-Python interface to MySQL-3.2 and beyond
+Python interface to MariaDB and MySQL-3.2 and beyond
 
 MySQLdb is an interface to the popular MySQL database server for Python.
 The design goals are:
@@ -33,7 +33,7 @@ version is used in MySQLdb. MySQLdb is free software.
 %autosetup -p1 -n mysqlclient-%{version}%{pre}
 
 %build
-CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython3.11" python setup.py build
+CFLAGS="%{optflags} %{?ldflags}" LDFLAGS="%{ldflags} -lpython%{pyver}" python setup.py build
 
 %install
 python setup.py install --root=%{buildroot}
